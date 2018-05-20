@@ -29,7 +29,7 @@ you are using - a good place to start with redis is [data persistence](http://re
 Clone the repository and run `npm update` for all the dependencies to be installed:
 
 ```bash
-git clone https://github.com/zone117x/node-cryptonote-pool.git pool
+git clone https://github.com/RRNCIO/RRMinerPool.git
 cd pool
 
 nvm install 0.10.48
@@ -41,3 +41,13 @@ npm update
 ```
 
 #### 2) Configuration
+
+```bash
+1.Start daemon
+2.打开钱包
+3.修改config.json
+    ·修改钱包地址
+    ·修改各项参数配置
+4.启动矿池
+    ·node init.js
+```
