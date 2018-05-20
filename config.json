@@ -1,0 +1,112 @@
+{
+    "coin": "rrz",
+    "symbol": "XMR",
+    "logging": {
+        "files": {
+            "level": "error",
+            "directory": "logs",
+            "flushInterval": 5
+        },
+        "console": {
+            "level": "info",
+            "colors": true
+        }
+    },
+
+    "poolServer": {
+        "enabled": true,
+        "clusterForks": "auto",
+        "poolAddress": "RRRWViRfAhx82muxmNykyGffMWTVwJmTK8b2SGES8WSB2vbkWnCaTy8GDqaS1qnuUGB5rh8WcKhuwJHP2o1vjbhw1kcBg1ZJA",
+        "blockRefreshInterval": 1000,
+        "minerTimeout": 900,
+        "ports": [
+            {
+                "port": 3333,
+                "difficulty": 100,
+                "desc": "Low end hardware"
+            },
+            {
+                "port": 5555,
+                "difficulty": 2000,
+                "desc": "Mid range hardware"
+            },
+            {
+                "port": 7777,
+                "difficulty": 10000,
+                "desc": "High end hardware"
+            }
+        ],
+        "varDiff": {
+            "minDiff": 2,
+            "maxDiff": 10000000,
+            "targetTime": 100,
+            "retargetTime": 30,
+            "variancePercent": 30,
+            "maxJump": 100
+        },
+        "shareTrust": {
+            "enabled": true,
+            "min": 10,
+            "stepDown": 3,
+            "threshold": 10,
+            "penalty": 30
+        },
+        "banning": {
+            "enabled": true,
+            "time": 600,
+            "invalidPercent": 25,
+            "checkThreshold": 30
+        },
+        "slushMining": {
+            "enabled": false,
+            "weight": 300,
+            "blockTime": 60,
+            "lastBlockCheckRate": 1
+        }
+    },
+
+    "payments": {
+        "enabled": true,
+        "interval": 600,
+        "maxAddresses": 10,
+        "mixin": 0,
+        "transferFee": 0,
+        "minPayment": 1000,
+        "denomination": 1000
+    },
+
+    "blockUnlocker": {
+        "enabled": true,
+        "interval": 30,
+        "depth": 1,
+        "poolFee": 2,
+        "devDonation": 0.1,
+        "coreDevDonation": 0.1
+    },
+
+    "api": {
+        "enabled": true,
+        "hashrateWindow": 600,
+        "updateInterval": 5,
+        "port": "",
+        "blocks": 30,
+        "payments": 30,
+        "password": ""
+    },
+
+    "daemon": {
+        "host": "127.0.0.1",
+        "port": 22338
+    },
+
+    "wallet": {
+        "host": "127.0.0.1",
+        "port": "8082"
+    },
+
+    "redis": {
+        "host": "172.31.41.115",
+        "port": 6379,
+        "auth": null
+    }
+}
